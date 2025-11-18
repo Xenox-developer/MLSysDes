@@ -1,4 +1,3 @@
-```markdown
 # ML System Design Document — Predictive Maintenance
 
 ## 1. Цель проекта
