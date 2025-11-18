@@ -37,4 +37,12 @@
 - Метрики: ROC-AUC, Precision@k, Recall, F1 для событий; бизнес: уменьшение downtime.
 
 ## 6. Архитектура решения (блок-схема)
-Data sources -> ETL/cleaning -> Feature engineering (windowing, PCA) -> LSTM autoencoder -> anomaly score -> Bayesian or thresholding -> Alerts/Reporting
+```mermaid
+flowchart LR
+    A[Data sources] --> B[ETL / Cleaning]
+    B --> C["Feature engineering<br/>(windowing, PCA)"]
+    C --> D[LSTM autoencoder]
+    D --> E[Anomaly score]
+    E --> F[Bayesian or thresholding]
+    F --> G[Alerts / Reporting]
+```
