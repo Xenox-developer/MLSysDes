@@ -8,7 +8,7 @@
 
 ## Документация
 Основной документ с описанием архитектуры, метрик и бизнес-целей находится здесь:
-👉 **[ML System Design Document](./docs/ml_system_design_doc.md)**
+ **[ML System Design Document](./docs/ml_system_design_doc.md)**
 
 ---------------------
 
@@ -26,6 +26,7 @@
 ├── pyproject.toml          # Настройки black/ruff/isort
 ├── README.md
 └── requirements.txt        # Зависимости проекта
+```
 
 ---------------------
 
