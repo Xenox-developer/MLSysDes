@@ -1,0 +1,11 @@
+black
+ruff
+isort
+pre-commit
+mypy
+numpy
+pandas
+scikit-learn
+torch
+matplotlib
+jupyter
