@@ -70,13 +70,13 @@
 
 ```mermaid
 graph LR
-    A[Raw Sensor Data<br>(10-sec resolution)] --> B[Preprocessing & Cleaning<br>(Resample to hourly, cap outliers, normalize)]
-    B --> C{Feature Engineering<br>(PCA: 3 components, T² & Q residuals)}
-    C --> D[LSTM Autoencoder<br>(Train on etalon periods, Huber loss)]
-    D --> E[Bayesian Model<br>(Temporal modeling of T²/Q)]
-    E --> F[Anomaly Score + Probability<br>(Risk of M1 in [t, t+24h])]
+    A["Raw Sensor Data"] --> B["Preprocessing & Cleaning"]
+    B --> C{"Feature Engineering<br>(PCA 3 comp, T² & Q residuals, lags, rolling stats)"}
+    C --> D["LSTM Autoencoder<br>(Huber loss)"]
+    D --> E["Bayesian Model<br>(T²/Q)"]
+    E --> F["Anomaly Score + Probability<br>([t, t+24h])"]
     F --> G{Threshold Check}
-    G -- High Risk --> H[ALERT<br>(with lead time ~24h)]
+    G -- High Risk --> H["ALERT<br>(with lead time ~24h)"]
     G -- Normal --> I[No Action]
 ```
 
