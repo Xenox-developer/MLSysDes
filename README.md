@@ -16,11 +16,12 @@
 ```text
 ├── docs/                   # Документация проекта
 │   └── ml_system_design_doc.md
-├── src/                    # Исходный код
+├── source/                    # Исходный код
 │   ├── __init__.py
 │   ├── data/               # Скрипты для загрузки и обработки данных
 │   ├── models/             # Архитектура моделей (LSTM и др.)
 │   └── train.py            # Скрипт обучения
+│   └── EDA.py              # Исследователский анализ данных
 ├── .gitignore
 ├── .pre-commit-config.yaml # Конфигурация линтеров
 ├── pyproject.toml          # Настройки black/ruff/isort
